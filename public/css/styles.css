@@ -115,7 +115,7 @@ body { background-color: #ddd; width: 100vw; font-family: sans-serif; }
 
 .title { margin: 0; padding: 1rem 0; text-align: center; color: #fff; background: #333; }
 
-.container { width: 430px; height: 575px; margin: 2rem auto; background: -webkit-gradient(linear, left top, left bottom, from(rgba(35, 43, 85, 0.75)), to(rgba(35, 43, 85, 0.95))); background: -o-linear-gradient(rgba(35, 43, 85, 0.75), rgba(35, 43, 85, 0.95)); background: linear-gradient(rgba(35, 43, 85, 0.75), rgba(35, 43, 85, 0.95)); border-radius: 10px; padding-top: 20px; }
+.container { width: 430px; height: 575px; margin: 2rem auto; background: -webkit-gradient(linear, left top, left bottom, from(rgba(35, 43, 85, 0.75)), to(rgba(35, 43, 85, 0.95))); background: -o-linear-gradient(rgba(35, 43, 85, 0.75), rgba(35, 43, 85, 0.95)); background: linear-gradient(rgba(35, 43, 85, 0.75), rgba(35, 43, 85, 0.95)); border-radius: 10px; padding-top: 20px; overflow: hidden; }
 
 .links { list-style: none; padding-left: 0; margin: 0 0 1rem 1.2rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; width: 50%; padding: 1rem; font-size: 1.3rem; text-transform: capitalize; }
 
@@ -123,16 +123,26 @@ body { background-color: #ddd; width: 100vw; font-family: sans-serif; }
 
 .links__item--active { color: #fff; border-bottom: 2px solid #fff; padding-bottom: .4rem; }
 
-.forms { display: -webkit-box; display: -ms-flexbox; display: flex; width: 860px; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; position: relative; left: 0; -webkit-transition: left .3s; -o-transition: left .3s; transition: left .3s; }
+.forms { display: -webkit-box; display: -ms-flexbox; display: flex; width: 860px; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; position: relative; left: 0; -webkit-transition: left .5s; -o-transition: left .5s; transition: left .5s; opacity: 1; }
 
-.forms--move { left: -100%; }
+.forms--move { left: -100%; -webkit-animation: fadeIn 1s; animation: fadeIn 1s; }
+
+@-webkit-keyframes fadeIn { from { opacity: .5; }
+  to { opacity: 1; } }
+
+@keyframes fadeIn { from { opacity: .5; }
+  to { opacity: 1; } }
 
 .form { width: 430px; padding: 0 2rem; -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; }
 
-.form__field { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; margin-bottom: 1rem; }
+.form__field { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin-bottom: 1rem; }
 
-.form__field--check { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.form__field--check { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; }
 
 .form__label { font-size: 12px; padding-left: .5rem; padding-bottom: .5rem; color: rgba(255, 255, 255, 0.3); text-transform: uppercase; }
 
-.form__input { background: rgba(255, 255, 255, 0.3); border: none; height: 35px; border-radius: 20px; }
+.form__input { background-color: rgba(255, 255, 255, 0.2); border: none; height: 35px; border-radius: 20px; padding-left: 1rem; color: rgba(255, 255, 255, 0.5); -webkit-transition: background-color .3s; -o-transition: background-color .3s; transition: background-color .3s; }
+
+.form__input:focus { background-color: rgba(255, 255, 255, 0.8); color: rgba(68, 68, 68, 0.8); }
+
+.form__submit { margin-top: 1rem; background: #00aeff; height: 40px; border-radius: 20px; border: none; outline: none; color: #fff; text-transform: uppercase; }

@@ -10,15 +10,15 @@
   <body>
     <h1 class="title">Dynamic forms</h1>
     <div class="container">
-      <ul class="links">
+      <ul class="links" id="links">
         <li class="links__item links__item--active">sign in</li>
         <li class="links__item">sign up</li>
       </ul>
-      <div class="forms">
+      <div class="forms" id="forms">
         <form class="form" action="">
           <div class="form__field">
             <label class="form__label" for="name">Name</label>
-            <input class="form__input" type="text" name="name" id="name"/>
+            <input class="form__input" type="text" name="name" autocomplete="off" id="name"/>
           </div>
           <div class="form__field">
             <label class="form__label" for="password">Password</label>
@@ -29,13 +29,13 @@
             <label class="form__check-label" for="signed-in">Keep me signed in</label>
           </div>
           <div class="form__field">
-            <input type="submit" value="Login"/>
+            <input class="form__submit" type="submit" value="Sign in" id="submit-sign-up"/>
           </div><a href="#">Not register yet</a>
         </form>
         <form class="form" action="#">
           <div class="form__field">
-            <input class="form__input" type="text" name="name" id="name"/>
             <label class="form__label" for="name">Name</label>
+            <input class="form__input" type="text" name="name" autocomplete="off" id="name"/>
           </div>
           <div class="form__field">
             <label class="form__label" for="password">Password</label>
@@ -47,10 +47,10 @@
           </div>
           <div class="form__field">
             <label class="form__label" for="email">Email</label>
-            <input class="form__input" type="text" name="email" id="email"/>
+            <input class="form__input" type="text" name="email" autocomplete="off" id="email"/>
           </div>
           <div class="form__field">
-            <input type="submit" value="register"/>
+            <input class="form__submit" type="submit" value="Sign up" id="submit-sign-up"/>
           </div><a href="#">have an acount? Sig in</a>
         </form>
       </div>

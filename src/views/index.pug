@@ -9,15 +9,15 @@ html(lang="en")
     body
         h1.title Dynamic forms
         .container
-            ul.links
+            ul#links.links
                 li.links__item.links__item--active sign in
                 li.links__item sign up
             
-            .forms
+            #forms.forms
                 form(action="").form
                     .form__field
                         label(for="name").form__label Name
-                        input(type="text" name="name")#name.form__input
+                        input(type="text" name="name" autocomplete="off")#name.form__input
                     .form__field
                         label(for="password").form__label Password
                         input(type="text" name="password")#password.form__input
@@ -25,14 +25,13 @@ html(lang="en")
                         input(type="checkbox" name="signed-in")#signed-in.form__check-input
                         label(for="signed-in").form__check-label Keep me signed in
                     .form__field
-                        input(type="submit" value="Login")
+                        input(type="submit" value="Sign in")#submit-sign-up.form__submit
                     a(href="#") Not register yet
 
-      
                 form(action="#").form
                     .form__field
-                        input(type="text" name="name")#name.form__input
                         label(for="name").form__label Name
+                        input(type="text" name="name" autocomplete="off")#name.form__input
                     .form__field
                         label(for="password").form__label Password
                         input(type="password" name="password")#password.form__input
@@ -41,9 +40,9 @@ html(lang="en")
                         input(type="password" name="password2")#password2.form__input
                     .form__field
                         label(for="email").form__label Email
-                        input(type="text" name="email")#email.form__input
+                        input(type="text" name="email" autocomplete="off")#email.form__input
                     .form__field
-                        input(type="submit" value="register")
+                        input(type="submit" value="Sign up")#submit-sign-up.form__submit
                     a(href="#") have an acount? Sig in
 
 

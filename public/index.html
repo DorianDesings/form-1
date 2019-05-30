@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="./css/styles.css"/>
+    <title>index</title>
+  </head>
+  <body>
+    <h1 class="title">Dynamic forms</h1>
+    <div class="container">
+      <ul class="links">
+        <li class="links__item links__item--active">sign in</li>
+        <li class="links__item">sign up</li>
+      </ul>
+      <div class="forms">
+        <form class="form" action="">
+          <div class="form__field">
+            <label class="form__label" for="name">Name</label>
+            <input class="form__input" type="text" name="name" id="name"/>
+          </div>
+          <div class="form__field">
+            <label class="form__label" for="password">Password</label>
+            <input class="form__input" type="text" name="password" id="password"/>
+          </div>
+          <div class="form__field form__field--check">
+            <input class="form__check-input" type="checkbox" name="signed-in" id="signed-in"/>
+            <label class="form__check-label" for="signed-in">Keep me signed in</label>
+          </div>
+          <div class="form__field">
+            <input type="submit" value="Login"/>
+          </div><a href="#">Not register yet</a>
+        </form>
+        <form class="form" action="#">
+          <div class="form__field">
+            <input class="form__input" type="text" name="name" id="name"/>
+            <label class="form__label" for="name">Name</label>
+          </div>
+          <div class="form__field">
+            <label class="form__label" for="password">Password</label>
+            <input class="form__input" type="password" name="password" id="password"/>
+          </div>
+          <div class="form__field">
+            <label class="form__label" for="password2">Repeat Password</label>
+            <input class="form__input" type="password" name="password2" id="password2"/>
+          </div>
+          <div class="form__field">
+            <label class="form__label" for="email">Email</label>
+            <input class="form__input" type="text" name="email" id="email"/>
+          </div>
+          <div class="form__field">
+            <input type="submit" value="register"/>
+          </div><a href="#">have an acount? Sig in</a>
+        </form>
+      </div>
+    </div>
+    <script src="js/scripts-min.js"></script>
+  </body>
+</html>

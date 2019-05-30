@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="./css/styles.css")
+        title index
+    body
+        h1.title Dynamic forms
+        .container
+            ul.links
+                li.links__item.links__item--active sign in
+                li.links__item sign up
+            
+            .forms
+                form(action="").form
+                    .form__field
+                        label(for="name").form__label Name
+                        input(type="text" name="name")#name.form__input
+                    .form__field
+                        label(for="password").form__label Password
+                        input(type="text" name="password")#password.form__input
+                    .form__field.form__field--check
+                        input(type="checkbox" name="signed-in")#signed-in.form__check-input
+                        label(for="signed-in").form__check-label Keep me signed in
+                    .form__field
+                        input(type="submit" value="Login")
+                    a(href="#") Not register yet
+
+      
+                form(action="#").form
+                    .form__field
+                        input(type="text" name="name")#name.form__input
+                        label(for="name").form__label Name
+                    .form__field
+                        label(for="password").form__label Password
+                        input(type="password" name="password")#password.form__input
+                    .form__field
+                        label(for="password2").form__label Repeat Password
+                        input(type="password" name="password2")#password2.form__input
+                    .form__field
+                        label(for="email").form__label Email
+                        input(type="text" name="email")#email.form__input
+                    .form__field
+                        input(type="submit" value="register")
+                    a(href="#") have an acount? Sig in
+
+
+        script(src="js/scripts-min.js")

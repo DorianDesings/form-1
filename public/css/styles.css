@@ -166,3 +166,5 @@ body { background-color: #ddd; width: 100vw; font-family: sans-serif; -webkit-us
 .form__submit { margin-top: 2rem; background: #00aeff; height: 40px; border-radius: 20px; border: none; outline: none; color: #fff; text-transform: uppercase; }
 
 .form a { text-decoration: none; color: #00aeff; border-bottom: 1px solid; padding-bottom: .2rem; margin-top: 2rem; }
+
+.form__img { display: block; max-width: 40%; margin: 1rem auto; }

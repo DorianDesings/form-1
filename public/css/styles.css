@@ -117,11 +117,15 @@ body { background-color: #ddd; width: 100vw; font-family: sans-serif; -webkit-us
 
 .container { width: 430px; height: 575px; margin: 2rem auto; background: -webkit-gradient(linear, left top, left bottom, from(rgba(35, 43, 85, 0.75)), to(rgba(35, 43, 85, 0.95))); background: -o-linear-gradient(rgba(35, 43, 85, 0.75), rgba(35, 43, 85, 0.95)); background: linear-gradient(rgba(35, 43, 85, 0.75), rgba(35, 43, 85, 0.95)); border-radius: 10px; padding-top: 20px; overflow: hidden; }
 
+@media screen and (max-width: 375px) { .container { width: 300px; } }
+
 .links { list-style: none; padding-left: 0; margin: 0 0 1rem 1.2rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; width: 50%; padding: 1rem; font-size: 1.3rem; text-transform: capitalize; }
 
 .links__item { color: rgba(255, 255, 255, 0.3); cursor: pointer; }
 
 .links__item--active { color: #fff; border-bottom: 2px solid #fff; padding-bottom: .4rem; }
+
+@media screen and (max-width: 375px) { .links { width: 80%; } }
 
 .forms { display: -webkit-box; display: -ms-flexbox; display: flex; width: 860px; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; position: relative; left: 0; -webkit-transition: left .5s; -o-transition: left .5s; transition: left .5s; opacity: 1; }
 
@@ -132,6 +136,8 @@ body { background-color: #ddd; width: 100vw; font-family: sans-serif; -webkit-us
 
 @keyframes fadeIn { from { opacity: .5; }
   to { opacity: 1; } }
+
+@media screen and (max-width: 375px) { .forms { width: 600px; } }
 
 .form { width: 430px; padding: 0 2rem; -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; }
 

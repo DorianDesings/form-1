@@ -6,6 +6,11 @@
     border-radius: 10px;
     padding-top: 20px;
     overflow: hidden;
+
+    @media screen and (max-width:375px) {
+        width: 300px
+        
+    }
 }
 
 .links{
@@ -27,6 +32,11 @@
             border-bottom: 2px solid #fff;
             padding-bottom: .4rem;
         }
+    }
+
+    @media screen and (max-width:375px) {
+        width: 80%;
+        
     }
 }
 
@@ -51,6 +61,11 @@
         to{
             opacity: 1;
         }
+    }
+
+    @media screen and (max-width:375px){
+        width: 600px
+        
     }
 }
 

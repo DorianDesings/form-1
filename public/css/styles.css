@@ -111,7 +111,7 @@ template { display: none; }
 /** Add the correct display in IE 10. */
 [hidden] { display: none; }
 
-body { background-color: #ddd; width: 100vw; font-family: sans-serif; }
+body { background-color: #ddd; width: 100vw; font-family: sans-serif; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 
 .title { margin: 0; padding: 1rem 0; text-align: center; color: #fff; background: #333; }
 
@@ -145,4 +145,18 @@ body { background-color: #ddd; width: 100vw; font-family: sans-serif; }
 
 .form__input:focus { background-color: rgba(255, 255, 255, 0.8); color: rgba(68, 68, 68, 0.8); }
 
-.form__submit { margin-top: 1rem; background: #00aeff; height: 40px; border-radius: 20px; border: none; outline: none; color: #fff; text-transform: uppercase; }
+.form__check-label { position: relative; -webkit-transform: translateX(60px); -ms-transform: translateX(60px); transform: translateX(60px); line-height: 30px; color: #00aeff; }
+
+.form__check-label::before { content: ''; display: block; position: absolute; -webkit-transform: translateX(-60px); -ms-transform: translateX(-60px); transform: translateX(-60px); width: 50px; height: 30px; border-radius: 15px; background-color: rgba(255, 255, 255, 0.3); -webkit-transition: background-color .3s; -o-transition: background-color .3s; transition: background-color .3s; }
+
+.form__check-label::after { content: ''; display: block; position: absolute; top: 0; -webkit-transform: translate(-58px, 0.16rem); -ms-transform: translate(-58px, 0.16rem); transform: translate(-58px, 0.16rem); width: 25px; height: 25px; border-radius: 15px; background-color: rgba(255, 255, 255, 0.5); -webkit-transition: -webkit-transform .3s; transition: -webkit-transform .3s; -o-transition: transform .3s; transition: transform .3s; transition: transform .3s, -webkit-transform .3s; }
+
+.form__check-input { display: none; }
+
+.form__check-input:checked + label::before { background-color: #00aeff; }
+
+.form__check-input:checked + label::after { -webkit-transform: translate(-40px, 0.16rem); -ms-transform: translate(-40px, 0.16rem); transform: translate(-40px, 0.16rem); }
+
+.form__submit { margin-top: 2rem; background: #00aeff; height: 40px; border-radius: 20px; border: none; outline: none; color: #fff; text-transform: uppercase; }
+
+.form a { text-decoration: none; color: #00aeff; border-bottom: 1px solid; padding-bottom: .2rem; margin-top: 2rem; }
